@@ -429,6 +429,24 @@ img.person-photo {
   padding: 1rem 1.1rem;
 }
 
+.pub-body {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.pub-thumbnail {
+  width: 5.5rem;
+  height: auto;
+  border-radius: 6px;
+  flex: none;
+  object-fit: cover;
+}
+
+@media (max-width: 480px) {
+  .pub-thumbnail { display: none; }
+}
+
 .publication-card h3,
 .conference-card h3 {
   font-size: 1.18rem;
