@@ -9,7 +9,49 @@
       content="Quantum Materials Theory (IQMT): people, publications, and conference highlights."
     />
     <style>
+      /* Light values are the default */
       :root {
+        --bg-1: #e8f4ff;
+        --bg-2: #d8eaff;
+        --radial-1: rgba(2, 132, 199, 0.12);
+        --radial-2: rgba(124, 58, 237, 0.10);
+        --panel: rgba(255, 255, 255, 0.82);
+        --panel-strong: rgba(255, 255, 255, 0.98);
+        --text: #0f1f3d;
+        --muted: #4a5c7e;
+        --accent: #0284c7;
+        --accent-2: #7c3aed;
+        --border: rgba(30, 60, 120, 0.14);
+        --shadow: 0 20px 60px rgba(0, 0, 60, 0.10);
+        --max-width: 1160px;
+        --header-bg: rgba(232, 244, 255, 0.85);
+        --brand-fg: #ffffff;
+        color-scheme: light;
+      }
+
+      /* Dark values applied when OS prefers dark (and user hasn't forced light) */
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg-1: #081120;
+          --bg-2: #0d1830;
+          --radial-1: rgba(103, 232, 249, 0.15);
+          --radial-2: rgba(139, 92, 246, 0.18);
+          --panel: rgba(15, 23, 42, 0.82);
+          --panel-strong: rgba(15, 23, 42, 0.96);
+          --text: #e5eefc;
+          --muted: #9db0d0;
+          --accent: #67e8f9;
+          --accent-2: #8b5cf6;
+          --border: rgba(148, 163, 184, 0.18);
+          --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+          --header-bg: rgba(8, 17, 32, 0.72);
+          --brand-fg: #04111f;
+          color-scheme: dark;
+        }
+      }
+
+      /* Explicit overrides from the toggle button */
+      :root[data-theme="dark"] {
         --bg-1: #081120;
         --bg-2: #0d1830;
         --radial-1: rgba(103, 232, 249, 0.15);
@@ -22,7 +64,6 @@
         --accent-2: #8b5cf6;
         --border: rgba(148, 163, 184, 0.18);
         --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-        --max-width: 1160px;
         --header-bg: rgba(8, 17, 32, 0.72);
         --brand-fg: #04111f;
         color-scheme: dark;
@@ -44,26 +85,6 @@
         --header-bg: rgba(232, 244, 255, 0.85);
         --brand-fg: #ffffff;
         color-scheme: light;
-      }
-
-      @media (prefers-color-scheme: light) {
-        :root:not([data-theme="dark"]) {
-          --bg-1: #e8f4ff;
-          --bg-2: #d8eaff;
-          --radial-1: rgba(2, 132, 199, 0.12);
-          --radial-2: rgba(124, 58, 237, 0.10);
-          --panel: rgba(255, 255, 255, 0.82);
-          --panel-strong: rgba(255, 255, 255, 0.98);
-          --text: #0f1f3d;
-          --muted: #4a5c7e;
-          --accent: #0284c7;
-          --accent-2: #7c3aed;
-          --border: rgba(30, 60, 120, 0.14);
-          --shadow: 0 20px 60px rgba(0, 0, 60, 0.10);
-          --header-bg: rgba(232, 244, 255, 0.85);
-          --brand-fg: #ffffff;
-          color-scheme: light;
-        }
       }
 
       * {
