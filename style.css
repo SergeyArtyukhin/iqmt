@@ -196,7 +196,7 @@ a:hover {
 }
 
 .hero {
-  padding: 5.5rem 0 3rem;
+  padding: 1.8rem 0 1.2rem;
 }
 
 .hero-grid {
@@ -307,11 +307,11 @@ main {
 }
 
 section {
-  padding: 1.5rem 0 0;
+  padding: 1rem 0 0;
 }
 
 #people {
-  padding-top: 0.25rem;
+  padding-top: 0;
 }
 
 .section-heading {
@@ -498,7 +498,7 @@ img.person-photo {
   }
 
   .hero {
-    padding-top: 4rem;
+    padding-top: 1.2rem;
   }
 
   .hero-grid,
