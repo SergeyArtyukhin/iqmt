@@ -337,17 +337,17 @@ section {
 }
 
 .person-top {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.9rem;
+  overflow: auto;
 }
 
 .person-photo-stack,
 img.person-photo {
   width: 5.52rem;
   height: calc(5.52rem * 1.618);
-  flex: none;
+  float: left;
   display: block;
+  margin-right: 0.9rem;
+  margin-bottom: 0.5rem;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--border);
