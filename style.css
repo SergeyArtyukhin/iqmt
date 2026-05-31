@@ -325,10 +325,13 @@ section {
 
 .person-card {
   padding: 1.25rem;
+  overflow: hidden;
 }
 
-.person-top {
-  overflow: auto;
+.person-top::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 .person-photo-stack,
