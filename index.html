@@ -253,7 +253,8 @@
         margin-bottom: 0.85rem;
       }
 
-      .person-photo {
+      .person-photo-stack,
+      img.person-photo {
         width: 4.6rem;
         aspect-ratio: 1 / 1.618;
         flex: none;
@@ -264,10 +265,36 @@
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
       }
 
+      .person-photo-stack {
+        position: relative;
+      }
+
       img.person-photo {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         object-position: center top;
         background: rgba(148, 163, 184, 0.12);
+      }
+
+      .person-photo-stack .person-photo {
+        position: absolute;
+        inset: 0;
+        transition: opacity 180ms ease;
+      }
+
+      .person-photo-stack .person-photo-hover {
+        opacity: 0;
+      }
+
+      .person-card:hover .person-photo-stack.has-hover-photo .person-photo-hover,
+      .person-card:focus-within .person-photo-stack.has-hover-photo .person-photo-hover {
+        opacity: 1;
+      }
+
+      .person-card:hover .person-photo-stack.has-hover-photo .person-photo-default,
+      .person-card:focus-within .person-photo-stack.has-hover-photo .person-photo-default {
+        opacity: 0;
       }
 
       .person-card h3 {
@@ -444,7 +471,10 @@
           <div class="people-grid">
             <article class="section-card person-card">
               <div class="person-top">
-                <img class="person-photo" src="photos/Sergey_1.png" alt="Sergey Artyukhin portrait" />
+                <div class="person-photo-stack has-hover-photo">
+                  <img class="person-photo person-photo-default" src="photos/Sergey_1.png" alt="Sergey Artyukhin portrait" />
+                  <img class="person-photo person-photo-hover" src="photos/Sergey_2.png" alt="" aria-hidden="true" />
+                </div>
                 <div>
                   <h3>Sergey Artyukhin</h3>
                   <a class="email" href="mailto:sergey@iqmt.eu">sergey@iqmt.eu</a>
@@ -456,7 +486,10 @@
 
             <article class="section-card person-card">
               <div class="person-top">
-                <img class="person-photo" src="photos/Margherita_1.png" alt="Margherita Parodi portrait" />
+                <div class="person-photo-stack has-hover-photo">
+                  <img class="person-photo person-photo-default" src="photos/Margherita_1.png" alt="Margherita Parodi portrait" />
+                  <img class="person-photo person-photo-hover" src="photos/Margherita_2.png" alt="" aria-hidden="true" />
+                </div>
                 <div>
                   <h3>Margherita Parodi</h3>
                   <a class="email" href="mailto:margherita@iqmt.eu">margherita@iqmt.eu</a>
@@ -600,7 +633,6 @@
           <div class="conference-list">
             <article class="section-card conference-card">
               <h3><a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/search?query=Artyukhin&amp;submit=Suchen">DPG Spring Meeting 2026 (Dresden)</a></h3>
-              <div class="conference-note">DPG Spring Meeting 2026, Dresden</div>
               <ul>
                 <li>Mo, 10:00, MA 4.2: <a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/part/ma/session/4/contribution/2">Topological order parameter switching</a> — Sergey Artyukhin</li>
                 <li>Mo, 11:30, MA 4.5: <a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/part/ma/session/4/contribution/5">Multi-cell unit storage based on a multiferroic</a> — Maksim Ryzhkov et al.</li>
@@ -621,7 +653,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p>Quantum Materials Theory (IQMT) — theory, computation, and emergent materials phenomena.</p>
+        <p>Quantum Materials Theory, Genova, Italy</p>
       </div>
     </footer>
   </body>
