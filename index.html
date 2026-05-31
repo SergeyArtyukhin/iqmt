@@ -238,30 +238,36 @@
 
       .people-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.25rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
       }
 
       .person-card {
-        padding: 1.5rem;
+        padding: 1.25rem;
       }
 
       .person-top {
         display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 1rem;
+        align-items: flex-start;
+        gap: 0.9rem;
+        margin-bottom: 0.85rem;
       }
 
-      .avatar {
-        width: 3.25rem;
-        height: 3.25rem;
-        border-radius: 18px;
-        display: grid;
-        place-items: center;
-        font-weight: 800;
-        background: linear-gradient(135deg, rgba(103, 232, 249, 0.24), rgba(139, 92, 246, 0.32));
-        color: var(--accent);
+      .person-photo {
+        width: 4.6rem;
+        aspect-ratio: 1 / 1.618;
+        flex: none;
+        display: block;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+      }
+
+      img.person-photo {
+        object-fit: cover;
+        object-position: center top;
+        background: rgba(148, 163, 184, 0.12);
       }
 
       .person-card h3 {
@@ -274,31 +280,33 @@
         color: var(--muted);
       }
 
-      .meta-label {
-        display: inline-block;
-        margin-top: 0.9rem;
-        margin-bottom: 0.35rem;
-        color: var(--accent);
-        font-size: 0.8rem;
+      .person-role {
+        margin-top: 0.2rem;
+        font-size: 0.78rem;
         font-weight: 700;
+        letter-spacing: 0.04em;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
+        color: var(--accent);
       }
 
       .person-card p {
-        margin: 0.2rem 0 0;
+        margin: 0.1rem 0 0;
         color: var(--muted);
       }
 
       .publications-list,
       .conference-list {
         display: grid;
-        gap: 1rem;
+        gap: 0.85rem;
       }
 
       .publication-card,
       .conference-card {
         padding: 1.35rem 1.4rem;
+      }
+
+      .publication-card {
+        padding: 1rem 1.1rem;
       }
 
       .publication-card h3,
@@ -307,11 +315,40 @@
         margin-bottom: 0.45rem;
       }
 
+      .publication-card h3 {
+        font-size: 1.08rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .publication-card p,
+      .conference-card p {
+        margin: 0.45rem 0 0;
+      }
+
       .journal,
       .conference-note {
         color: var(--accent);
         font-weight: 700;
         margin-bottom: 0.55rem;
+      }
+
+      .journal a {
+        color: var(--accent);
+      }
+
+      .journal-ref {
+        color: var(--muted);
+        font-size: 0.92rem;
+        margin-top: -0.2rem;
+      }
+
+      .conference-card ul {
+        margin: 0.7rem 0 0;
+        padding-left: 1.15rem;
+      }
+
+      .conference-card li + li {
+        margin-top: 0.35rem;
       }
 
       .footer {
@@ -357,7 +394,7 @@
           <span>Quantum Materials Theory</span>
         </a>
         <nav class="nav" aria-label="Primary">
-          <a href="#people">People</a>
+          <a href="#people">Group</a>
           <a href="#publications">Publications</a>
           <a href="#conferences">Conferences</a>
         </nav>
@@ -368,7 +405,7 @@
       <section class="hero">
         <div class="container hero-grid">
           <div>
-            <span class="eyebrow">Theory • Topology • Quantum Materials</span>
+            <span class="eyebrow">materials theory • multiferroics • topological phenomena • quantum geometry • domain walls and switching • noncollinear magnets</span>
             <h1>Building microscopic theory for functional quantum materials.</h1>
             <p>
               IQMT connects symmetry, topology, electronic structure, and experimentally measurable responses.
@@ -376,7 +413,7 @@
               AI-guided discovery workflows.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#people">Meet the team</a>
+              <a class="button button-primary" href="#people">Meet the group</a>
               <a class="button button-secondary" href="#publications">View publications</a>
             </div>
           </div>
@@ -403,106 +440,94 @@
         <div class="container">
           <div class="section-heading">
             <div>
-              <h2>People</h2>
-              <p class="section-intro">Researchers working across theory, computation, and emergent materials phenomena.</p>
+              <h2>Group</h2>
+              <p class="section-intro">Simple member cards with interests inferred from recent coauthored arXiv work by Sergey Artyukhin.</p>
             </div>
           </div>
 
           <div class="people-grid">
             <article class="section-card person-card">
               <div class="person-top">
-                <div class="avatar">SA</div>
+                <img class="person-photo" src="photos/Sergey_1.png" alt="Sergey Artyukhin portrait" />
                 <div>
                   <h3>Sergey Artyukhin</h3>
                   <a class="email" href="mailto:sergey@iqmt.eu">sergey@iqmt.eu</a>
+                  <div class="person-role">PI</div>
                 </div>
               </div>
-              <span class="meta-label">Interests</span>
-              <p>Spin-lattice coupling, multiferroics, emergent quantum phenomena.</p>
-              <span class="meta-label">Featured paper</span>
-              <p><em>Microscopic mechanisms of magnetoelectric coupling</em> — <strong>Physical Review B</strong>.</p>
-              <span class="meta-label">Main message</span>
-              <p>Building microscopic theory for functional quantum materials. Connecting symmetry, topology, and experimentally measurable responses.</p>
+              <p>Multiferroics, magnetoelectric switching, topological defects, and quantum geometry in complex magnets.</p>
             </article>
 
             <article class="section-card person-card">
               <div class="person-top">
-                <div class="avatar">MP</div>
+                <img class="person-photo" src="photos/Margherita_1.png" alt="Margherita Parodi portrait" />
                 <div>
                   <h3>Margherita Parodi</h3>
                   <a class="email" href="mailto:margherita@iqmt.eu">margherita@iqmt.eu</a>
+                  <div class="person-role">Doctoral Student</div>
                 </div>
               </div>
-              <span class="meta-label">Interests</span>
-              <p>Correlated electrons, ab-initio modeling, spectroscopy.</p>
-              <span class="meta-label">Featured paper</span>
-              <p><em>Correlation-driven phases in quantum oxides</em> — <strong>npj Computational Materials</strong>.</p>
-              <span class="meta-label">Main message</span>
-              <p>Combining first-principles methods with model Hamiltonians. Turning complex many-body effects into predictive materials insights.</p>
+              <p>Noncollinear magnets, magnon thermal conductivity, and electric-field-driven domain wall motion in spin spirals.</p>
             </article>
 
             <article class="section-card person-card">
               <div class="person-top">
-                <div class="avatar">LM</div>
+                <img class="person-photo" src="photos/Luca_1.png" alt="Luca Maranzana portrait" />
                 <div>
                   <h3>Luca Maranzana</h3>
                   <a class="email" href="mailto:luca@iqmt.eu">luca@iqmt.eu</a>
+                  <div class="person-role">Doctoral Student</div>
                 </div>
               </div>
-              <span class="meta-label">Interests</span>
-              <p>Topological matter, transport theory, Berry-phase effects.</p>
-              <span class="meta-label">Featured paper</span>
-              <p><em>Topological transport in low-symmetry crystals</em> — <strong>Physical Review Letters</strong>.</p>
-              <span class="meta-label">Main message</span>
-              <p>Exploring topology beyond idealized textbook systems. Linking band geometry to robust transport signatures.</p>
+              <p>Quantum metric effects, topological pumping of bimerons, merons, and fast ferrimagnetic domain-wall dynamics.</p>
             </article>
 
             <article class="section-card person-card">
               <div class="person-top">
-                <div class="avatar">RK</div>
+                <img class="person-photo" src="photos/Ravi_1.png" alt="Ravi Kaushik portrait" />
                 <div>
                   <h3>Ravi Kaushik</h3>
                   <a class="email" href="mailto:ravi@iqmt.eu">ravi@iqmt.eu</a>
+                  <div class="person-role">Doctoral Student</div>
                 </div>
               </div>
-              <span class="meta-label">Interests</span>
-              <p>Machine learning for materials, atomistic simulations, phase discovery.</p>
-              <span class="meta-label">Featured paper</span>
-              <p><em>Data-driven discovery of quantum phase boundaries</em> — <strong>Journal of Chemical Physics</strong>.</p>
-              <span class="meta-label">Main message</span>
-              <p>Using AI-guided workflows to accelerate materials discovery. Bridging simulation data and physically interpretable descriptors.</p>
+              <p>Finite-temperature magnetic interactions, spin-orbital order, and first-principles models for coupled magnetic and ferroelectric states.</p>
             </article>
 
             <article class="section-card person-card">
               <div class="person-top">
-                <div class="avatar">AB</div>
+                <img class="person-photo" src="photos/Pietro_1.png" alt="Pietro Diona portrait" />
+                <div>
+                  <h3>Pietro Diona</h3>
+                  <a class="email" href="mailto:pietro@iqmt.eu">pietro@iqmt.eu</a>
+                  <div class="person-role">Doctoral Student</div>
+                </div>
+              </div>
+              <p>relativistic domain wall motion in ferrimagnets and non-uniform materials</p>
+            </article>
+
+            <article class="section-card person-card">
+              <div class="person-top">
+                <img class="person-photo" src="photos/Aleksandr_1.png" alt="Aleksandr Buzdakov portrait" />
                 <div>
                   <h3>Aleksandr Buzdakov</h3>
                   <a class="email" href="mailto:aleksandr@iqmt.eu">aleksandr@iqmt.eu</a>
+                  <div class="person-role">Postdoc</div>
                 </div>
               </div>
-              <span class="meta-label">Interests</span>
-              <p>Magnetism, spin dynamics, nonequilibrium phenomena.</p>
-              <span class="meta-label">Featured paper</span>
-              <p><em>Ultrafast spin dynamics in frustrated magnets</em> — <strong>Physical Review B</strong>.</p>
-              <span class="meta-label">Main message</span>
-              <p>Studying how spins evolve on ultrafast timescales. Revealing dynamical pathways to control magnetic states.</p>
+              <p>Magnetic dynamics, fast domain-wall motion, and nonequilibrium behavior in ferrimagnetic and spiral systems.</p>
             </article>
 
             <article class="section-card person-card">
               <div class="person-top">
-                <div class="avatar">AG</div>
+                <img class="person-photo" src="photos/Alessandro_1.png" alt="Alessandro Granero portrait" />
                 <div>
                   <h3>Alessandro Granero</h3>
                   <a class="email" href="mailto:alessandro@iqmt.eu">alessandro@iqmt.eu</a>
+                  <div class="person-role">Fellow</div>
                 </div>
               </div>
-              <span class="meta-label">Interests</span>
-              <p>Electronic structure, low-dimensional materials, quantum interfaces.</p>
-              <span class="meta-label">Featured paper</span>
-              <p><em>Electronic reconstruction at oxide interfaces</em> — <strong>Advanced Functional Materials</strong>.</p>
-              <span class="meta-label">Main message</span>
-              <p>Investigating interfaces where new quantum states emerge. Designing structure-property links for next-generation devices.</p>
+              <p>Multiferroic switching pathways, coupled electric and magnetic order, and controllable topological textures in oxides.</p>
             </article>
           </div>
         </div>
@@ -513,39 +538,59 @@
           <div class="section-heading">
             <div>
               <h2>Publications</h2>
-              <p class="section-intro">Selected recent work highlighting theory-led advances in quantum materials.</p>
+              <p class="section-intro">Recent arXiv papers from the Sergey Artyukhin author page, focused on the newest work across the group.</p>
             </div>
           </div>
 
           <div class="publications-list">
             <article class="section-card publication-card">
-              <h3>Microscopic mechanisms of magnetoelectric coupling</h3>
-              <div class="journal">Physical Review B</div>
+              <h3>Semiclassical Wave-Packet Dynamics in Phase-Space Geometry: Quantum Metric Effects</h3>
+              <div class="journal"><a href="https://arxiv.org/abs/2603.21262">arXiv:2603.21262</a> • March 2026</div>
+              <div class="journal-ref">Journal ref pending</div>
               <p>
-                A symmetry-resolved theory identifies dominant spin-lattice channels responsible for electric
-                polarization in noncollinear magnets.
+                A phase-space treatment of quantum geometry puts real-space and momentum-space effects on equal
+                footing for transport and optical phenomena.
               </p>
-              <p><a href="https://arxiv.org/abs/2401.01234">Read on arXiv</a></p>
             </article>
 
             <article class="section-card publication-card">
-              <h3>Topological transport in low-symmetry crystals</h3>
-              <div class="journal">Physical Review Letters</div>
+              <h3>Thermal conductivity in noncollinear magnets</h3>
+              <div class="journal"><a href="https://arxiv.org/abs/2602.03326">arXiv:2602.03326</a> • February 2026</div>
+              <div class="journal-ref">Journal ref pending</div>
               <p>
-                Berry curvature hot spots in low-symmetry bands produce anisotropic Hall-like responses without
-                conventional ferromagnetism.
+                Magnon heat transport is analyzed in a spin-spiral setting to show how noncollinearity reshapes
+                thermal conductivity in magnetic memory materials.
               </p>
-              <p><a href="https://arxiv.org/abs/2403.04567">Read on arXiv</a></p>
             </article>
 
             <article class="section-card publication-card">
-              <h3>Data-driven discovery of quantum phase boundaries</h3>
-              <div class="journal">Journal of Chemical Physics</div>
+              <h3>Highly controllable switching pathways in multiferroic GdMn_2O_5</h3>
+              <div class="journal"><a href="https://arxiv.org/abs/2602.02939">arXiv:2602.02939</a> • February 2026</div>
+              <div class="journal-ref">Journal ref pending</div>
               <p>
-                A hybrid ML + theory framework maps phase transitions from sparse simulation data while preserving
-                physically meaningful order parameters.
+                Topologically protected switching routes in a multiferroic are used to clarify how electric fields
+                can steer magnetic states through accessible pathways.
               </p>
-              <p><a href="https://arxiv.org/abs/2405.07890">Read on arXiv</a></p>
+            </article>
+
+            <article class="section-card publication-card">
+              <h3>Rocket-like dynamics of ferrimagnetic domain walls in graded materials</h3>
+              <div class="journal"><a href="https://arxiv.org/abs/2601.21068">arXiv:2601.21068</a> • January 2026</div>
+              <div class="journal-ref">Journal ref pending</div>
+              <p>
+                Composition gradients in ferrimagnets are shown to enable strongly accelerated domain-wall motion,
+                pointing to faster racetrack and THz spintronic devices.
+              </p>
+            </article>
+
+            <article class="section-card publication-card">
+              <h3>Finite temperature magnetic interactions from first principles</h3>
+              <div class="journal"><a href="https://arxiv.org/abs/2510.16143">arXiv:2510.16143</a> • October 2025</div>
+              <div class="journal-ref">Journal ref pending</div>
+              <p>
+                An ab-initio route to temperature-dependent exchange interactions connects phonons, magnetism,
+                and room-temperature materials performance.
+              </p>
             </article>
           </div>
         </div>
@@ -556,23 +601,24 @@
           <div class="section-heading">
             <div>
               <h2>Conferences</h2>
-              <p class="section-intro">Recent talks and meeting highlights connected to the group’s research directions.</p>
             </div>
           </div>
 
           <div class="conference-list">
             <article class="section-card conference-card">
-              <h3>DPG Spring Meeting 2026 (Dresden)</h3>
-              <div class="conference-note">Recent talks based on the Artyukhin search page</div>
-              <p>
-                <a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/search?query=Artyukhin&amp;submit=Suchen">
-                  Search results for Artyukhin at DPG Dresden 2026
-                </a>
-              </p>
+              <h3><a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/search?query=Artyukhin&amp;submit=Suchen">DPG Spring Meeting 2026 (Dresden)</a></h3>
+              <div class="conference-note">DPG Spring Meeting 2026, Dresden</div>
               <ul>
-                <li>Theory of spin-lattice entanglement in multiferroics</li>
-                <li>Berry-curvature engineering in correlated quantum materials</li>
-                <li>First-principles routes to emergent magnetoelectricity</li>
+                <li>Mo, 10:00, MA 4.2: <a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/part/ma/session/4/contribution/2">Topological order parameter switching</a> — Sergey Artyukhin</li>
+                <li>Mo, 11:30, MA 4.5: <a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/part/ma/session/4/contribution/5">Multi-cell unit storage based on a multiferroic</a> — Maksim Ryzhkov et al.</li>
+                <li>Mo, 11:45, MA 4.6: <a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/part/ma/session/4/contribution/6">E-field induced unidirectional motion of domain wall in a ferromagnet and time crystals</a> — Margherita Parodi et al.</li>
+                <li>Di, 09:45, MA 16.2: <a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/part/ma/session/16/contribution/2">Topological pumping of skyrmionic textures in spiral multiferroics</a> — Luca Maranzana et al.</li>
+                <li>Di, 09:45, MA 17.2: <a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/part/ma/session/17/contribution/2">Competition Between Multiferroic and Magnetic Soliton Lattice States in DyFeO3</a> — Nikita Andriushin et al.</li>
+                <li>Di, 11:45, MA 17.9: <a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/part/ma/session/17/contribution/9">Towards topological switching in multiferroics</a> — Alessandro Granero and Sergey Artyukhin</li>
+                <li>Mi, 10:00, MA 30.3: <a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/part/ma/session/30/contribution/3">Antiferromagnetic Writing by Magneto-electric Field in Cr<sub>2</sub>O<sub>3</sub></a> — Aleksandr Buzdakov et al.</li>
+                <li>Mi, 11:15, MA 27.6: <a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/part/ma/session/27/contribution/6">Spin-lattice coupling control of ultrafast order melting in antiferromagnetic insulators</a> — Ravi Kaushik et al.</li>
+                <li>Mi, 12:00, MA 30.10: <a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/part/ma/session/30/contribution/10">Rocket-like dynamics of ferrimagnetic domain walls in graded magnets</a> — Pietro Diona et al.</li>
+                <li>Mi, 16:30, MA 37.7: <a href="https://www.dpg-verhandlungen.de/year/2026/conference/dresden/part/ma/session/37/contribution/7">Magnetization dynamics of twists in (anti-)ferromagnetic insulators</a> — Aisha Aqeel et al.</li>
               </ul>
             </article>
           </div>
