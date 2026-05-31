@@ -4,11 +4,8 @@
       <stop offset="0%" stop-color="#67e8f9"/>
       <stop offset="100%" stop-color="#8b5cf6"/>
     </linearGradient>
-    <clipPath id="r">
-      <rect width="32" height="32" rx="8"/>
-    </clipPath>
   </defs>
   <rect width="32" height="32" rx="8" fill="url(#g)"/>
-  <text x="16" y="22" font-family="ui-sans-serif,system-ui,sans-serif" font-weight="800"
-        font-size="12" fill="#04111f" text-anchor="middle" letter-spacing="-0.5">QMT</text>
+  <text x="16" y="22" font-family="ui-rounded,'SF Pro Rounded',Nunito,system-ui,sans-serif" font-weight="700"
+        font-size="13" fill="#04111f" text-anchor="middle" letter-spacing="0.3">qmt</text>
 </svg>
