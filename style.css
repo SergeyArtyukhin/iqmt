@@ -340,7 +340,6 @@ section {
   display: flex;
   align-items: flex-start;
   gap: 0.9rem;
-  margin-bottom: 0.85rem;
 }
 
 .person-photo-stack,
