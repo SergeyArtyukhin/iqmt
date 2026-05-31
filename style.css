@@ -136,19 +136,10 @@ a:hover {
 }
 
 .brand-mark {
-  width: 2.5rem;
-  height: 2.5rem;
-  display: grid;
-  place-items: center;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: var(--brand-fg);
   font-weight: 700;
-  font-size: 0.97rem;
+  font-size: 1rem;
   letter-spacing: 0.03em;
-  font-style: italic;
-  font-family: ui-rounded, 'SF Pro Rounded', 'Nunito', system-ui, sans-serif;
-  box-shadow: var(--shadow);
+  color: var(--accent);
 }
 
 .nav {
@@ -392,9 +383,6 @@ img.person-photo {
 .person-card h3 {
   font-size: 1.2rem;
   margin: 0 0 0.15rem 0;
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
 }
 
 .person-card .email-link {
@@ -409,13 +397,14 @@ img.person-photo {
 }
 
 .person-card .email-icon {
-  font-size: 0.95rem;
+  font-size: 0.9em;
   color: var(--muted);
   text-decoration: none;
   cursor: pointer;
   transition: color 180ms ease;
-  display: inline-flex;
-  align-items: center;
+  display: inline;
+  vertical-align: middle;
+  margin-left: 0.3rem;
 }
 
 .person-card .email-icon:hover {
