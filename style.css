@@ -392,7 +392,35 @@ img.person-photo {
 
 .person-card h3 {
   font-size: 1.2rem;
-  margin-bottom: 0.15rem;
+  margin: 0 0 0.15rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.person-card .email-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.person-card .email-link:hover {
+  color: var(--accent);
+}
+
+.person-card .email-icon {
+  font-size: 0.95rem;
+  color: var(--muted);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 180ms ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.person-card .email-icon:hover {
+  color: var(--accent);
 }
 
 .person-card .email {
@@ -437,7 +465,7 @@ img.person-photo {
 
 .pub-thumbnail {
   width: 5.5rem;
-  height: auto;
+  height: 5.5rem;
   border-radius: 6px;
   flex: none;
   object-fit: cover;
