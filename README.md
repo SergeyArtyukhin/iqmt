@@ -77,7 +77,7 @@
 
 ### DPG Spring Meeting 2026 (Dresden)
 Recent talks based on the Artyukhin search page:
-https://www.dpg-verhandlungen.de/year/2026/conference/dresden/search?query=Artyukhin&submit=Suchen
+[Search results for Artyukhin at DPG Dresden 2026](https://www.dpg-verhandlungen.de/year/2026/conference/dresden/search?query=Artyukhin&submit=Suchen)
 
 - **Theory of spin-lattice entanglement in multiferroics** — DPG Dresden 2026.
 - **Berry-curvature engineering in correlated quantum materials** — DPG Dresden 2026.
