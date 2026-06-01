@@ -136,6 +136,7 @@ a:hover {
 }
 
 .brand-mark {
+  font-family: ui-sans-serif, system-ui, sans-serif;
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: 0.03em;
