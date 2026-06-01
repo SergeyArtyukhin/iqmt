@@ -1,12 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- x-axis -->
-  <line x1="4" y1="22" x2="28" y2="22" stroke="black" stroke-width="0.8"/>
-  <polygon points="27.5,20.5 31,22 27.5,23.5" fill="black"/>
-  <!-- y-axis -->
-  <line x1="4" y1="22" x2="4" y2="5" stroke="black" stroke-width="0.8"/>
-  <polygon points="2.5,6.5 4,3 5.5,6.5" fill="black"/>
-  <!-- tanh kink: xc=17, sigma=1.3 (~1/5 plot width), yc=13, amp=7 -->
-  <polyline points="4.0,20.00 13.0,19.97 14.0,19.86 14.5,19.71 15.0,19.38 15.5,18.73 16.0,17.53 16.5,15.57 17.0,13.00 17.5,10.43 18.0,8.47 18.5,7.27 19.0,6.62 19.5,6.29 20.0,6.14 20.5,6.06 21.0,6.03 30.0,6.00"
+  <defs>
+    <!-- Open chevron arrow marker, auto-oriented -->
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <polyline points="1,1 9,5 1,9" stroke="black" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <!-- x-axis at y=13 (tanh y=0) -->
+  <line x1="4" y1="13" x2="29" y2="13" stroke="black" stroke-width="1" marker-end="url(#arr)"/>
+  <!-- y-axis: from y=23 (kink bottom) up through origin, arrow upward -->
+  <line x1="4" y1="23" x2="4" y2="2" stroke="black" stroke-width="1" marker-end="url(#arr)"/>
+  <!-- tanh kink: xc=17, sigma=1.3, yc=13, amp=10 -->
+  <polyline points="4.0,23.00 13.0,22.96 14.0,22.80 14.5,22.58 15.0,22.12 15.5,21.19 16.0,19.46 16.5,16.67 17.0,13.00 17.5,9.33 18.0,6.54 18.5,4.81 19.0,3.88 19.5,3.42 20.0,3.20 20.5,3.09 21.0,3.04 30.0,3.00"
         stroke="#228B22" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
   <!-- QMT label -->
   <text x="16" y="31" font-family="ui-sans-serif,system-ui,sans-serif" font-weight="700"
