@@ -581,8 +581,14 @@ img.person-photo {
 }
 
 .thesis-list .pdf-icon {
-  font-size: 0.85em;
-  opacity: 0.6;
+  width: 1.1em;
+  height: 1.35em;
+  vertical-align: middle;
+  display: inline-block;
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+  position: relative;
+  top: -0.05em;
 }
 
 .thesis-list .thesis-year {
