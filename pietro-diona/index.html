@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pietro Diona — Quantum Materials Theory</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <meta name="description" content="Pietro Diona, Doctoral Student at the Quantum Materials Theory Group (IIT Genova). Research: relativistic domain wall motion in ferrimagnets and non-uniform materials." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .profile-section { padding: 2rem 0 0; }
+      .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--muted); font-size: 0.9rem; margin-bottom: 1.25rem; text-decoration: none; }
+      .back-link:hover { color: var(--accent); }
+      .profile-card { display: flex; gap: 2.5rem; align-items: flex-start; padding: 2rem; }
+      .profile-photo-col { flex-shrink: 0; }
+      .profile-photo-stack { position: relative; width: 10rem; height: calc(10rem * 1.618); border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow); overflow: hidden; }
+      .profile-photo-stack img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: opacity 180ms ease; }
+      .profile-photo-stack .hover-photo { opacity: 0; }
+      .profile-photo-stack:hover .hover-photo { opacity: 1; }
+      .profile-photo-stack:hover .default-photo { opacity: 0; }
+      .profile-info { flex: 1; }
+      .profile-info h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 0.2rem; }
+      .profile-role { color: var(--muted); font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem; }
+      .profile-email { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; font-size: 0.95rem; }
+      @media (max-width: 560px) { .profile-card { flex-direction: column; } }
+      .pub-section { padding-top: 1rem; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/" aria-label="QMT home">
+          <span class="brand-mark">QMT</span>
+          <span>Quantum Materials Theory Group</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="/#people">Team</a>
+          <a href="/#publications">Publications</a>
+          <a href="/#conferences">Talks</a>
+          <a href="/#codes">Codes</a>
+          <a href="/#alumni">Alumni</a>
+          <a href="/#theses">Theses</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">🌙</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="profile-section">
+        <div class="container">
+          <a class="back-link" href="/">← Back to group page</a>
+          <div class="profile-card section-card">
+            <div class="profile-photo-col">
+              <div class="profile-photo-stack">
+                <img class="default-photo" src="../photos/Pietro_1.webp" alt="Pietro Diona portrait" />
+                <img class="hover-photo" src="../photos/Pietro_2.webp" alt="" aria-hidden="true" />
+              </div>
+            </div>
+            <div class="profile-info">
+              <h1>Pietro Diona</h1>
+              <div class="profile-role">Doctoral Student · IIT Genova</div>
+              <p>Relativistic domain wall motion in ferrimagnets and non-uniform materials.</p>
+              <a class="profile-email" href="mailto:pietro@iqmt.eu">✉ pietro@iqmt.eu</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pub-section" id="publications">
+        <div class="container">
+          <div class="section-heading"><div><h2>Publications</h2></div></div>
+          <div class="publications-list">
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/rocket_like_dynamics.png" alt="">
+                <div>
+                  <h3>Rocket-like dynamics of ferrimagnetic domain walls in graded materials</h3>
+                  <div class="author-list">P. Diona, S. Artyukhin, and L. Maranzana</div>
+                  <div class="journal"><a href="https://arxiv.org/abs/2601.21068">arXiv:2601.21068</a> (2026)</div>
+                  <div class="journal-ref">PRB Letter, in press</div>
+                  <p>Composition gradients in ferrimagnets are shown to enable new physical mechanisms for domain wall acceleration, with potential for faster racetrack and THz spintronic devices.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/observation_relativistic_domain_wall.png" alt="">
+                <div>
+                  <h3>Observation of relativistic domain wall motion in amorphous ferrimagnets</h3>
+                  <div class="author-list">P. Diona, L. Maranzana, S. Artyukhin, and G. Sala</div>
+                  <div class="journal"><a href="https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adfm.202522549">Advanced Functional Materials 36 (23), e22549 (2026)</a></div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Quantum Materials Theory, Genova, Italy</p>
+      </div>
+    </footer>
+
+    <script>
+      const root = document.documentElement;
+      const btn  = document.getElementById('themeToggle');
+      function applyTheme(t) {
+        root.dataset.theme = t;
+        btn.textContent = t === 'dark' ? '☀' : '🌙';
+        localStorage.setItem('iqmt-theme', t);
+      }
+      const saved     = localStorage.getItem('iqmt-theme');
+      const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      applyTheme(saved || preferred);
+      btn.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+    </script>
+  </body>
+</html>

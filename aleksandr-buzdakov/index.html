@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aleksandr Buzdakov — Quantum Materials Theory</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <meta name="description" content="Aleksandr Buzdakov, Postdoc at the Quantum Materials Theory Group (IIT Genova). Research: ultrafast laser-induced spin dynamics, antiferromagnetic writing, spin-lattice coupling, nonlinear magnon transport." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .profile-section { padding: 2rem 0 0; }
+      .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--muted); font-size: 0.9rem; margin-bottom: 1.25rem; text-decoration: none; }
+      .back-link:hover { color: var(--accent); }
+      .profile-card { display: flex; gap: 2.5rem; align-items: flex-start; padding: 2rem; }
+      .profile-photo-col { flex-shrink: 0; }
+      .profile-photo-stack { position: relative; width: 10rem; height: calc(10rem * 1.618); border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow); overflow: hidden; }
+      .profile-photo-stack img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: opacity 180ms ease; }
+      .profile-photo-stack .hover-photo { opacity: 0; }
+      .profile-photo-stack:hover .hover-photo { opacity: 1; }
+      .profile-photo-stack:hover .default-photo { opacity: 0; }
+      .profile-info { flex: 1; }
+      .profile-info h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 0.2rem; }
+      .profile-role { color: var(--muted); font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem; }
+      .profile-email { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; font-size: 0.95rem; }
+      @media (max-width: 560px) { .profile-card { flex-direction: column; } }
+      .pub-section { padding-top: 1rem; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/" aria-label="QMT home">
+          <span class="brand-mark">QMT</span>
+          <span>Quantum Materials Theory Group</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="/#people">Team</a>
+          <a href="/#publications">Publications</a>
+          <a href="/#conferences">Talks</a>
+          <a href="/#codes">Codes</a>
+          <a href="/#alumni">Alumni</a>
+          <a href="/#theses">Theses</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">🌙</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="profile-section">
+        <div class="container">
+          <a class="back-link" href="/">← Back to group page</a>
+          <div class="profile-card section-card">
+            <div class="profile-photo-col">
+              <div class="profile-photo-stack">
+                <img class="default-photo" src="../photos/Aleksandr_1.webp" alt="Aleksandr Buzdakov portrait" />
+                <img class="hover-photo" src="../photos/Aleksandr_2.webp" alt="" aria-hidden="true" />
+              </div>
+            </div>
+            <div class="profile-info">
+              <h1>Aleksandr Buzdakov</h1>
+              <div class="profile-role">Postdoc · IIT Genova</div>
+              <p>Ultrafast laser-induced spin dynamics, antiferromagnetic writing via magnetoelectric fields, spin-lattice coupling, and nonlinear magnon transport.</p>
+              <a class="profile-email" href="mailto:alex@iqmt.eu">✉ alex@iqmt.eu</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pub-section" id="publications">
+        <div class="container">
+          <div class="section-heading"><div><h2>Publications</h2></div></div>
+          <div class="publications-list">
+
+            <article class="section-card publication-card">
+              <h3>Larkin length as a criterion for antiferromagnetic writing</h3>
+              <div class="author-list">Nikolai Khokhlov, Aleksandr Buzdakov, Timur Gareev, Sheng Li, Xuewen Wang, Sergey Artyukhin, and Alexey Kimel</div>
+              <div class="journal"><a href="https://doi.org/10.21203/rs.3.rs-9405081/v1">Research Square preprint</a> (2026)</div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Quantum Materials Theory, Genova, Italy</p>
+      </div>
+    </footer>
+
+    <script>
+      const root = document.documentElement;
+      const btn  = document.getElementById('themeToggle');
+      function applyTheme(t) {
+        root.dataset.theme = t;
+        btn.textContent = t === 'dark' ? '☀' : '🌙';
+        localStorage.setItem('iqmt-theme', t);
+      }
+      const saved     = localStorage.getItem('iqmt-theme');
+      const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      applyTheme(saved || preferred);
+      btn.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+    </script>
+  </body>
+</html>

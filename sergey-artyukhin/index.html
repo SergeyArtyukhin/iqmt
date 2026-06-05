@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sergey Artyukhin — Quantum Materials Theory</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <meta name="description" content="Sergey Artyukhin, Principal Investigator at the Quantum Materials Theory Group (IIT Genova). Research: multiferroics, magnetoelectric effect, topological defects, noncollinear magnets, Berry phase phenomena." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" /></noscript>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .profile-section { padding: 2rem 0 0; }
+      .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--muted); font-size: 0.9rem; margin-bottom: 1.25rem; text-decoration: none; }
+      .back-link:hover { color: var(--accent); }
+      .profile-card { display: flex; gap: 2.5rem; align-items: flex-start; padding: 2rem; }
+      .profile-photo-col { flex-shrink: 0; }
+      .profile-photo-stack { position: relative; width: 10rem; height: calc(10rem * 1.618); border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow); overflow: hidden; }
+      .profile-photo-stack img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: opacity 180ms ease; }
+      .profile-photo-stack .hover-photo { opacity: 0; }
+      .profile-photo-stack:hover .hover-photo { opacity: 1; }
+      .profile-photo-stack:hover .default-photo { opacity: 0; }
+      img.profile-photo { display: block; width: 10rem; height: calc(10rem * 1.618); border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow); object-fit: cover; object-position: center top; }
+      .profile-info { flex: 1; }
+      .profile-info h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 0.2rem; }
+      .profile-role { color: var(--muted); font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem; }
+      .profile-email { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; font-size: 0.95rem; }
+      @media (max-width: 560px) { .profile-card { flex-direction: column; } }
+      .pub-section { padding-top: 1rem; }
+      .thesis-section { padding-top: 0; }
+    </style>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+      <symbol id="pdf-icon-sym" viewBox="0 0 32 32">
+        <path fill="#909090" d="m24.1 2.072l5.564 5.8v22.056H8.879V30h20.856V7.945L24.1 2.072"/>
+        <path fill="#f4f4f4" d="M24.031 2H8.808v27.928h20.856V7.873L24.03 2"/>
+        <path fill="#7a7b7c" d="M8.655 3.5h-6.39v6.827h20.1V3.5H8.655"/>
+        <path fill="#dd2025" d="M22.472 10.211H2.395V3.379h20.077v6.832"/>
+        <path fill="#fff" d="M8.975 4.457H7.668v4.8H8.7V7.639l.228.013a2.042 2.042 0 0 0 .647-.117a1.428 1.428 0 0 0 .493-.291a1.224 1.224 0 0 0 .332-.454a2.13 2.13 0 0 0 .105-.908a2.237 2.237 0 0 0-.114-.644a1.173 1.173 0 0 0-.687-.65a2.149 2.149 0 0 0-.411-.105a2.232 2.232 0 0 0-.319-.026m-.189 2.294h-.089v-1.48h.194a.57.57 0 0 1 .459.181a.92.92 0 0 1 .183.558c0 .246 0 .469-.222.626a.942.942 0 0 1-.524.114m3.67-2.306c-.111 0-.219.008-.295.011l-.235.006h-.78v4.8h.918a2.677 2.677 0 0 0 1.028-.175a1.71 1.71 0 0 0 .68-.491a1.939 1.939 0 0 0 .373-.749a3.728 3.728 0 0 0 .114-.949a4.416 4.416 0 0 0-.087-1.127a1.777 1.777 0 0 0-.4-.733a1.63 1.63 0 0 0-.535-.4a2.413 2.413 0 0 0-.549-.178a1.282 1.282 0 0 0-.228-.017m-.182 3.937h-.1V5.315h.013a1.062 1.062 0 0 1 .6.107a1.2 1.2 0 0 1 .324.4a1.3 1.3 0 0 1 .142.526c.009.22 0 .4 0 .549a2.926 2.926 0 0 1-.033.513a1.756 1.756 0 0 1-.169.5a1.13 1.13 0 0 1-.363.36a.673.673 0 0 1-.416.106m5.077-3.915h-2.43v4.8h1.028V7.357h1.3v-.892h-1.3V5.353h1.4v-.892"/>
+        <path fill="#dd2025" d="M21.781 20.255s3.188-.578 3.188.511s-1.975.646-3.188-.511Zm-2.357.083a7.543 7.543 0 0 0-1.473.489l.4-.9c.4-.9.815-2.127.815-2.127a14.216 14.216 0 0 0 1.658 2.252a13.033 13.033 0 0 0-1.4.288Zm-1.262-6.5c0-.949.307-1.208.546-1.208s.508.115.517.939a10.787 10.787 0 0 1-.517 2.434a4.426 4.426 0 0 1-.547-2.162Zm-4.649 10.516c-.978-.585 2.051-2.386 2.6-2.444c-.003.001-1.576 3.056-2.6 2.444ZM25.9 20.895c-.01-.1-.1-1.207-2.07-1.16a14.228 14.228 0 0 0-2.453.173a12.542 12.542 0 0 1-2.012-2.655a11.76 11.76 0 0 0 .623-3.1c-.029-1.2-.316-1.888-1.236-1.878s-1.054.815-.933 2.013a9.309 9.309 0 0 0 .665 2.338s-.425 1.323-.987 2.639s-.946 2.006-.946 2.006a9.622 9.622 0 0 0-2.725 1.4c-.824.767-1.159 1.356-.725 1.945c.374.508 1.683.623 2.853-.91a22.549 22.549 0 0 0 1.7-2.492s1.784-.489 2.339-.623s1.226-.24 1.226-.24s1.629 1.639 3.2 1.581s1.495-.939 1.485-1.035"/>
+        <path fill="#909090" d="M23.954 2.077V7.95h5.633l-5.633-5.873Z"/>
+        <path fill="#f4f4f4" d="M24.031 2v5.873h5.633L24.031 2Z"/>
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/" aria-label="QMT home">
+          <span class="brand-mark">QMT</span>
+          <span>Quantum Materials Theory Group</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="/#people">Team</a>
+          <a href="/#publications">Publications</a>
+          <a href="/#conferences">Talks</a>
+          <a href="/#codes">Codes</a>
+          <a href="/#alumni">Alumni</a>
+          <a href="/#theses">Theses</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">🌙</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="profile-section">
+        <div class="container">
+          <a class="back-link" href="/">← Back to group page</a>
+          <div class="profile-card section-card">
+            <div class="profile-photo-col">
+              <div class="profile-photo-stack">
+                <img class="default-photo" src="../photos/Sergey_1.webp" alt="Sergey Artyukhin portrait" />
+                <img class="hover-photo" src="../photos/Sergey_2.webp" alt="" aria-hidden="true" />
+              </div>
+            </div>
+            <div class="profile-info">
+              <h1>Sergey Artyukhin</h1>
+              <div class="profile-role">Principal Investigator · IIT Genova</div>
+              <p>(Multi)ferroics, magnetoelectric effect, topological defects and their dynamics, noncollinear magnets, Berry phase phenomena.</p>
+              <a class="profile-email" href="mailto:sergey@iqmt.eu">✉ sergey@iqmt.eu</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="profile-section" style="padding-top:0;">
+        <div class="container">
+          <div class="section-card" style="padding: 1.5rem 2rem; color: var(--muted); line-height: 1.75;">
+            <p style="margin:0;">I am a condensed matter theorist using models and computational methods to describe effects of interactions in real materials. Interactions of many particles often result in complex orders and <a href="http://en.wikipedia.org/wiki/Emergence">emergent behaviour</a>, very different from the behaviour of isolated particles. My research is mainly focused on <a href="http://en.wikipedia.org/wiki/Geometrical_frustration">frustrated magnets</a> and <a href="http://en.wikipedia.org/wiki/Multiferroics">multiferroics</a>, although I worked on a broad range of topics from dynamics in quantum Hall ferromagnets to excitonic optical absorption of semiconductors in high magnetic fields. I did my <a href="../thesis/artyukhin_phd.pdf">PhD</a> with Maxim Mostovoy (Groningen) and my postdoc with David Vanderbilt and Karin Rabe, working in close collaboration with Sang-Wook Cheong (Rutgers). In 2015 I have joined the faculty of the Italian Institute of Technology in Genova, Italy as a leader of the Quantum Materials Theory group.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="pub-section" id="publications">
+        <div class="container">
+          <div class="section-heading"><div><h2>Publications</h2></div></div>
+          <div class="publications-list">
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/semiclassical_wavepacket.png" alt="">
+                <div>
+                  <h3>Semiclassical Wave-Packet Dynamics in Phase-Space Geometry: Quantum Metric Effects</h3>
+                  <div class="author-list">Luca Maranzana, Koki Shinada, Ying-Ming Xie, Sergey Artyukhin, and Naoto Nagaosa</div>
+                  <div class="journal"><a href="https://arxiv.org/abs/2603.21262">arXiv:2603.21262</a> (2026)</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/thermal_conductivity_noncollinear.png" alt="">
+                <div>
+                  <h3>Thermal conductivity in noncollinear magnets</h3>
+                  <div class="author-list">Margherita Parodi and Sergey Artyukhin</div>
+                  <div class="journal"><a href="https://arxiv.org/abs/2602.03326">arXiv:2602.03326</a> (2026)</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/highly_controllable_switching.png" alt="">
+                <div>
+                  <h3>Highly controllable switching pathways in multiferroic GdMn<sub>2</sub>O<sub>5</sub></h3>
+                  <div class="author-list">M. Ryzhkov, A. Granero, J. Wettstein, Anna Pimenov, X. Wang, L. Ponet, S.-W. Cheong, M. Mostovoy, and Sergey Artyukhin</div>
+                  <div class="journal"><a href="https://arxiv.org/abs/2602.02939">arXiv:2602.02939</a> (2026)</div>
+                  <div class="journal-ref">Communications Materials, in press</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/rocket_like_dynamics.png" alt="">
+                <div>
+                  <h3>Rocket-like dynamics of ferrimagnetic domain walls in graded materials</h3>
+                  <div class="author-list">P. Diona, S. Artyukhin, and L. Maranzana</div>
+                  <div class="journal"><a href="https://arxiv.org/abs/2601.21068">arXiv:2601.21068</a> (2026)</div>
+                  <div class="journal-ref">PRB Letter, in press</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <h3>Larkin length as a criterion for antiferromagnetic writing</h3>
+              <div class="author-list">Nikolai Khokhlov, Aleksandr Buzdakov, Timur Gareev, Sheng Li, Xuewen Wang, Sergey Artyukhin, and Alexey Kimel</div>
+              <div class="journal"><a href="https://doi.org/10.21203/rs.3.rs-9405081/v1">Research Square preprint</a> (2026)</div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/observation_relativistic_domain_wall.png" alt="">
+                <div>
+                  <h3>Observation of relativistic domain wall motion in amorphous ferrimagnets</h3>
+                  <div class="author-list">P. Diona, L. Maranzana, S. Artyukhin, and G. Sala</div>
+                  <div class="journal"><a href="https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adfm.202522549">Advanced Functional Materials 36 (23), e22549 (2026)</a></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <h3>Nonlocal magnetoelectric switching in spiral multiferroics</h3>
+              <div class="author-list">F. Foggetti, M. Parodi, N. Nagaosa, and S. Artyukhin</div>
+              <div class="journal"><a href="https://doi.org/10.1016/j.newton.2025.100375">Newton 2, 100375</a> (2026)</div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/competition_dyfeO3_soliton.png" alt="">
+                <div>
+                  <h3>Competition between multiferroic and magnetic soliton lattice states in DyFeO<sub>3</sub></h3>
+                  <div class="author-list">S. E. Nikitin, N. D. Andriushin, O. S. Fjellvag, E. Pomjakushina, A. A. Turrini, S. Artyukhin, C. W. Schneider, and M. Mostovoy</div>
+                  <div class="journal"><a href="https://journals.aps.org/prresearch/abstract/10.1103/kwrl-x4hw">Physical Review Research 7 (4), 043173 (2025)</a></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/finite_temperature_magnetic.png" alt="">
+                <div>
+                  <h3>Finite temperature magnetic interactions from first principles</h3>
+                  <div class="author-list">Ravi Kaushik, Ryota Ono, and Sergey Artyukhin</div>
+                  <div class="journal"><a href="https://arxiv.org/abs/2510.16143">arXiv:2510.16143</a> (2025)</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/spiral_multiferroics_skyrmion.png" alt="">
+                <div>
+                  <h3>Spiral multiferroics as a natural skyrmion racetrack</h3>
+                  <div class="author-list">Luca Maranzana, Maxim Mostovoy, Naoto Nagaosa, and Sergey Artyukhin</div>
+                  <div class="journal"><a href="https://arxiv.org/abs/2502.13083">arXiv:2502.13083</a> (2025)</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <h3>Group IV binary carbides with double layer honeycomb lattice structure</h3>
+              <div class="author-list">Mehrdad Faraji, Aditya Putatunda, Alexander Schleusener, Sergey Artyukhin, and Roman Krahne</div>
+              <div class="journal"><a href="https://doi.org/10.1063/5.0268484">Journal of Applied Physics 138 (8)</a> (2025)</div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/trimerization_domain_walls.png" alt="">
+                <div>
+                  <h3>Trimerization domain walls and vortices in multiferroic BaCoSiO<sub>4</sub></h3>
+                  <div class="author-list">Aditya Putatunda and Sergey Artyukhin</div>
+                  <div class="journal"><a href="https://doi.org/10.1103/PhysRevB.111.184101">Physical Review B 111 (18), 184101</a> (2025)</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/multiferroic_kinks_nispintronic.png" alt="">
+                <div>
+                  <h3>Multiferroic kinks and spin-flop transition in Ni<sub>2</sub>InSbO<sub>6</sub> from first principles</h3>
+                  <div class="author-list">Ryota Ono, I. Solovyev, and Sergey Artyukhin</div>
+                  <div class="journal"><a href="https://www.nature.com/articles/s44306-024-00020-9">npj Spintronics 2 (1), 17 (2024)</a></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/merons_hedgehogs_magnetoelectric.png" alt="">
+                <div>
+                  <h3>Merons, hedgehogs and magnetoelectric switching in spiral multiferroics</h3>
+                  <div class="author-list">Luca Maranzana, Naoto Nagaosa, and Sergey Artyukhin</div>
+                  <div class="journal"><a href="https://arxiv.org/abs/2403.11195">arXiv:2403.11195</a> (2024)</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/prb-2023.png" alt="">
+                <div>
+                  <h3>Microscopic origin of the electric Dzyaloshinskii-Moriya interaction</h3>
+                  <div class="author-list">P. Chen, H. J. Zhao, S. Prosandeev, S. Artyukhin, and L. Bellaiche</div>
+                  <div class="journal"><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.106.224101">Physical Review B 106 (22), 224101 (2023)</a></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/nature-2022.png" alt="">
+                <div>
+                  <h3>Topologically protected magnetoelectric switching in a multiferroic</h3>
+                  <div class="author-list">Louis Ponet, S. Artyukhin, Th. Kain, J. Wettstein, Anna Pimenov, A. Shuvaev, X. Wang, S.-W. Cheong, Maxim Mostovoy, and Andrei Pimenov</div>
+                  <div class="journal"><a href="https://doi.org/10.1038/s41586-022-04851-6">Nature 607 (7917), 81–85 (2022)</a></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/ferroelectricity_mof.png" alt="">
+                <div>
+                  <h3>Ferroelectricity and topological vortices from molecular ordering in metal-organic frameworks</h3>
+                  <div class="author-list">F. Foggetti, A. Stroppa, and S. Artyukhin</div>
+                  <div class="journal"><a href="https://arxiv.org/abs/2204.09546">arXiv:2204.09546</a> (2022)</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/electric_field_induced_domain_wall.png" alt="">
+                <div>
+                  <h3>Electric field-induced domain wall motion in spin spiral multiferroics</h3>
+                  <div class="author-list">F. Foggetti, M. Parodi, N. Nagaosa, and S. Artyukhin</div>
+                  <div class="journal"><a href="https://arxiv.org/abs/2204.09027">arXiv:2204.09027</a> (2022)</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/natmat-2021.png" alt="">
+                <div>
+                  <h3>Dzyaloshinskii-Moriya-like interaction in ferroelectrics and antiferroelectrics</h3>
+                  <div class="author-list">H. J. Zhao, P. Chen, S. Prosandeev, S. Artyukhin, and L. Bellaiche</div>
+                  <div class="journal"><a href="https://www.nature.com/articles/s41563-020-00821-3">Nature Materials 20 (3), 341–345 (2021)</a></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="section-card publication-card">
+              <div class="pub-body">
+                <img class="pub-thumbnail" src="../thumbnails/domain_wall_phonons_biFO3.webp" alt="">
+                <div>
+                  <h3>Domain wall-localized phonons in BiFeO<sub>3</sub>: spectrum and selection rules</h3>
+                  <div class="author-list">P. Chen, L. Ponet, K. Lai, R. Cingolani, and S. Artyukhin</div>
+                  <div class="journal"><a href="https://doi.org/10.1038/s41524-020-0304-y">npj Computational Materials 6, 62 (2020)</a></div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="thesis-section" id="thesis">
+        <div class="container">
+          <div class="section-heading"><div><h2>Thesis</h2></div></div>
+          <div class="section-card alumni-card">
+            <ul class="thesis-list">
+              <li><a href="../thesis/artyukhin_phd.pdf">PhD thesis — Sergey Artyukhin <svg class="pdf-icon" aria-hidden="true"><use href="#pdf-icon-sym"/></svg></a> <span class="thesis-year">(February 2012)</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Quantum Materials Theory, Genova, Italy</p>
+      </div>
+    </footer>
+
+    <script>
+      const root = document.documentElement;
+      const btn  = document.getElementById('themeToggle');
+      function applyTheme(t) {
+        root.dataset.theme = t;
+        btn.textContent = t === 'dark' ? '☀' : '🌙';
+        localStorage.setItem('iqmt-theme', t);
+      }
+      const saved     = localStorage.getItem('iqmt-theme');
+      const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      applyTheme(saved || preferred);
+      btn.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+    </script>
+  </body>
+</html>
