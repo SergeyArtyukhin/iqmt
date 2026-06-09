@@ -439,6 +439,20 @@ img.person-photo {
   color: var(--muted);
 }
 
+.person-links {
+  margin-top: 0.45rem;
+  font-size: 0.92rem;
+}
+
+.person-links a {
+  color: var(--muted);
+}
+
+.person-links a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
 .publications-list,
 .conference-list {
   display: grid;
