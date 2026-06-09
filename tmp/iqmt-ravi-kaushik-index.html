@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ravi Kaushik — Quantum Materials Theory</title>
     <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
-    <meta name="description" content="Ravi Kaushik, Doctoral Student at the Quantum Materials Theory Group (IIT Genova). Research: electron-phonon coupling in magnetic materials, ultrafast spin-lattice dynamics, Raman optical activity, quantum geometry, multiferroics, and finite-temperature first-principles methods." />
+    <meta name="description" content="Ravi Kaushik, Doctoral Researcher at the Quantum Materials Theory Group (IIT Genova). Research: electron-phonon coupling in magnetic materials, ultrafast magnetism, Raman optical activity, quantum geometry, multiferroics, finite-temperature first-principles methods." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" />
@@ -25,9 +25,11 @@
       .profile-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.9rem; }
       .profile-link { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.88rem; color: var(--muted); text-decoration: none; padding: 0.25rem 0.6rem; border: 1px solid var(--border); border-radius: 6px; transition: color 0.15s, border-color 0.15s; }
       .profile-link:hover { color: var(--accent); border-color: var(--accent); }
+      .profile-email { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; font-size: 0.95rem; }
       .award-badge { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; font-size: 0.82rem; font-weight: 600; color: #8a6a1a; background: #fdf5e0; border: 1px solid #e8d08a; border-radius: 6px; padding: 0.3rem 0.65rem; }
       @media (max-width: 560px) { .profile-card { flex-direction: column; } }
       .pub-section { padding-top: 1rem; }
+      .section-divider { border: none; border-top: 1px solid var(--border); margin: 0.5rem 0 1.5rem; }
     </style>
   </head>
   <body>
@@ -59,20 +61,28 @@
             </div>
             <div class="profile-info">
               <h1>Ravi Kaushik</h1>
-              <div class="profile-role">Doctoral Student · IIT Genova</div>
+              <div class="profile-role">Postdoctoral Researcher · IIT Genova</div>
               <p>
-                Electron-phonon coupling in magnetic materials, ultrafast spin-lattice dynamics, Raman optical
-                activity and chiral phonons, quantum geometry and Berry phase physics, multiferroics, and
-                finite-temperature first-principles methods.
+                Electron-phonon coupling in magnetic materials, ultrafast spin-lattice dynamics,
+                Raman optical activity and chiral phonons, quantum geometry and Berry phase physics,
+                multiferroics, finite-temperature first-principles methods (DFT+U, DFPT, Wannier90,
+                spin-lattice dynamics).
               </p>
-              <div class="award-badge">Best Poster Award — EPW School 2024, University of Texas at Austin</div>
-              <div class="profile-links">
-                <a class="profile-link" href="mailto:ravi@iqmt.eu">✉ ravi@iqmt.eu</a>
-                <a class="profile-link" href="https://scholar.google.com/citations?user=-6QgIioAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-                <a class="profile-link" href="https://ravikaushik.github.io" target="_blank" rel="noopener noreferrer">Website</a>
-                <a class="profile-link" href="https://orcid.org/0009-0000-4614-9685" target="_blank" rel="noopener noreferrer">ORCID</a>
-                <a class="profile-link" href="https://arxiv.org/search/?searchtype=author&query=Kaushik%2C+Ravi" target="_blank" rel="noopener noreferrer">arXiv</a>
+              <div class="award-badge">
+                🏆 Best Poster Award — EPW School 2024, University of Texas at Austin
               </div>
+              <div class="profile-links">
+                <a class="profile-link" href="https://ravikaushik.github.io" target="_blank" rel="noopener">
+                  🌐 Website
+                </a>
+                <a class="profile-link" href="https://orcid.org/0009-0000-4614-9685" target="_blank" rel="noopener">
+                  ORCID
+                </a>
+                <a class="profile-link" href="https://arxiv.org/search/?searchtype=author&query=Kaushik%2C+Ravi" target="_blank" rel="noopener">
+                  arXiv
+                </a>
+              </div>
+              <a class="profile-email" href="mailto:ravi.kaushik@iit.it">✉ ravi.kaushik@iit.it</a>
             </div>
           </div>
         </div>
@@ -83,6 +93,7 @@
           <div class="section-heading"><div><h2>Publications</h2></div></div>
           <div class="publications-list">
 
+            <!-- Thesis -->
             <article class="section-card publication-card">
               <div class="pub-body">
                 <img class="pub-thumbnail" src="../thumbnails/finite_temperature_magnetic.png" alt="">
@@ -91,14 +102,16 @@
                   <div class="author-list">Ravi Kaushik</div>
                   <div class="journal">PhD Thesis, University of Genova (2026)</div>
                   <p>
-                    A first-principles framework combining DFPT, atomistic spin-lattice dynamics, and maximally
-                    localized Wannier functions to investigate phonon-driven phenomena in magnetic materials,
-                    including finite-temperature exchange, ultrafast demagnetization, and giant Raman optical activity.
+                    Combines DFPT, atomistic spin-lattice dynamics, and maximally localized Wannier functions
+                    into a unified first-principles framework to investigate phonon-driven phenomena in magnetic
+                    materials: finite-temperature exchange, ultrafast demagnetization in antiferromagnetic insulators,
+                    and giant Raman optical activity via Berry curvature modification by phonons.
                   </p>
                 </div>
               </div>
             </article>
 
+            <!-- CsO2 PRB -->
             <article class="section-card publication-card">
               <div class="pub-body">
                 <img class="pub-thumbnail" src="../thumbnails/finite_temperature_magnetic.png" alt="">
@@ -107,44 +120,52 @@
                   <div class="author-list">Ryota Ono, Ravi Kaushik, Sergey Artyukhin, Martin Jansen, Igor Solovyev, and Russell A. Ewings</div>
                   <div class="journal"><a href="https://arxiv.org/abs/2411.06671">arXiv:2411.06671</a> · Physical Review B (2026)</div>
                   <p>
-                    Ab-initio Hubbard models and superexchange theory show coexisting orbital, canted
-                    antiferromagnetic, and ferroelectric orders in CsO<sub>2</sub>, with a spin-flop transition
-                    that induces ferroelectricity through antisymmetric exchange striction.
+                    Ab-initio Hubbard models and superexchange theory reveal that CsO<sub>2</sub>, a p-electron magnet,
+                    exhibits coexisting orbital, canted antiferromagnetic, and ferroelectric orders. A spin-flop transition
+                    induces ferroelectricity via an antisymmetric exchange striction mechanism, making CsO<sub>2</sub>
+                    a rare multiferroic beyond the d/f-electron paradigm.
                   </p>
                 </div>
               </div>
             </article>
 
+            <!-- Buzdakov ultrafast -->
             <article class="section-card publication-card">
               <div class="pub-body">
                 <img class="pub-thumbnail" src="../thumbnails/finite_temperature_magnetic.png" alt="">
                 <div>
                   <h3>Exchange striction governs ultrafast magnetism in antiferromagnetic insulators</h3>
                   <div class="author-list">Aleksandr Buzdakov, Ravi Kaushik, Nikolai Khokhlov, Sergey Artyukhin, and Alexey Kimel</div>
-                  <div class="journal">Under review (2026)</div>
+                  <div class="journal">Under Review (2026)</div>
                   <p>
-                    Time-resolved SHG measurements and first-principles spin-lattice dynamics identify exchange
-                    striction as the key material parameter controlling ultrafast demagnetization in Cr<sub>2</sub>O<sub>3</sub>.
+                    Time-resolved SHG measurements show Cr<sub>2</sub>O<sub>3</sub> demagnetizes in ~2 ps — two orders
+                    of magnitude faster than FeBO<sub>3</sub>. First-principles spin-lattice dynamics identifies exchange
+                    striction (displacement derivative of magnetic exchange) as the controlling material parameter,
+                    computable entirely from ab initio inputs.
                   </p>
                 </div>
               </div>
             </article>
 
+            <!-- Stein ROA -->
             <article class="section-card publication-card">
               <div class="pub-body">
                 <img class="pub-thumbnail" src="../thumbnails/finite_temperature_magnetic.png" alt="">
                 <div>
                   <h3>Giant Raman Optical Activity in Chiral and Polar Ni<sub>3</sub>TeO<sub>6</sub></h3>
-                  <div class="author-list">Philipp Stein, Ravi Kaushik, Evgenia V. Komleva, Thomas C. Koethe, Vladimir Tsurkan, Istvan Kezsmarki, Markus Gruninger, Sergey V. Streltsov, Sergey Artyukhin, and Paul H. M. van Loosdrecht</div>
-                  <div class="journal">Under review (2026)</div>
+                  <div class="author-list">Philipp Stein, Ravi Kaushik, Evgenia V. Komleva, Thomas C. Koethe, Vladimir Tsurkan, István Kézsmárki, Markus Grüninger, Sergey V. Streltsov, Sergey Artyukhin, and Paul H. M. van Loosdrecht</div>
+                  <div class="journal">Under Review (2026)</div>
                   <p>
-                    First-principles calculations connect giant Raman optical activity in Ni<sub>3</sub>TeO<sub>6</sub>
-                    to phonon-driven modification of interband Berry curvature in solids.
+                    Ni<sub>3</sub>TeO<sub>6</sub> exhibits a 100× giant Raman optical activity compared to typical solids.
+                    First-principles calculations establish dynamic modification of interband Berry curvature through phonon
+                    excitation as the origin of ROA in solids. Chiral phonons are confirmed but do not contribute to ROA
+                    for light along the c-axis.
                   </p>
                 </div>
               </div>
             </article>
 
+            <!-- NiO / Cr2O3 exchange -->
             <article class="section-card publication-card">
               <div class="pub-body">
                 <img class="pub-thumbnail" src="../thumbnails/finite_temperature_magnetic.png" alt="">
@@ -153,8 +174,9 @@
                   <div class="author-list">Ravi Kaushik, Ryota Ono, and Sergey Artyukhin</div>
                   <div class="journal"><a href="https://arxiv.org/abs/2510.16143">arXiv:2510.16143</a> (2025)</div>
                   <p>
-                    A two-supercell ab-initio method for temperature-dependent exchange interactions reveals
-                    non-universal behavior, including an anomalous ~10% enhancement at 300 K in Cr<sub>2</sub>O<sub>3</sub>.
+                    Two-supercell ab-initio method for temperature-dependent exchange interactions reveals non-universal
+                    behavior: NiO exchange decreases with temperature (180° bonds), while Cr<sub>2</sub>O<sub>3</sub>
+                    shows an anomalous ~10% enhancement at 300 K driven by bond-angle changes and band-gap evolution.
                   </p>
                 </div>
               </div>
