@@ -140,9 +140,27 @@ a:hover {
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: 0.03em;
-  color: var(--accent);
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--header-bg);           
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
-
+.brand-rest {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+  display: inline-block;
+  background-color: var(--header-bg);        
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
 .nav {
   display: flex;
   gap: 0.25rem;
