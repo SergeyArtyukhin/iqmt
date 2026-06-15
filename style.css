@@ -142,7 +142,7 @@ a:hover {
   letter-spacing: 0.03em;
   display: inline-block;
   background-color: var(--accent);
-  color: var(--header-bg);           
+  color: var(--bfand-fg);           
   padding: 2px 8px;
   border-radius: 4px;
   font-weight: bold;
