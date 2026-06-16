@@ -137,29 +137,25 @@ a:hover {
 
 .brand-mark {
   font-family: ui-sans-serif, system-ui, sans-serif;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 1rem;
-  letter-spacing: 0.03em;
+  letter-spacing: 1px;
   display: inline-block;
   background-color: var(--accent);
-  color: var(--brand-fg);           
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  color: var(--header-bg);
+  padding: 0px 3px;
+  border-radius: 0;
 }
 .brand-rest {
   font-family: ui-sans-serif, system-ui, sans-serif;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 1rem;
-  letter-spacing: 0.03em;
+  letter-spacing: 1px;
   color: var(--accent);
   display: inline-block;
-  background-color: var(--header-bg);        
+  background-color: var(--header-bg);
   padding: 2px 8px;
   border-radius: 4px;
-  font-weight: bold;
-  letter-spacing: 1px;
 }
 .nav {
   display: flex;
