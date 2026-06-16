@@ -142,7 +142,7 @@ a:hover {
   letter-spacing: 1px;
   display: inline-block;
   background-color: var(--accent);
-  color: var(--header-bg);
+  color: color-mix(in srgb, var(--header-bg) 50%, white);
   padding: 0px 3px;
   border-radius: 0;
 }
